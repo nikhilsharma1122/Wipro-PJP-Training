@@ -19,8 +19,10 @@ public class training {
 			}
 		}
 		
-		if (n == 0 || n == 1) isPrime = false;
-		
+		if (n == 0 || n == 1) 
+		{
+			isPrime = false;
+		}
 		if (isPrime) 
 			{
 			System.out.println("prime");
