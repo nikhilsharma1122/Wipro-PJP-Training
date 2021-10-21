@@ -1,51 +1,44 @@
 package com.mile1.service;
 
 import com.mile1.bean.Student;
-import com.mile1.exception.NullMarksArrayException;
-import com.mile1.exception.NullNameException;
-import com.mile1.exception.NullStudentObjectException;
+import com.mile1.exception.*;
 
 public class StudentReport {
-	public String findGrades(Student studentobject) {
-		int marks[] = studentobject.getMarks();
-		if(marks[0]<35||marks[1]<35||marks[2]<35) {
-			return "F";
+
+	public String findGrades(Student s)
+	{
+		int[] marks = s.getMarks();
+		int marksSum = 0;
+		
+		for (int i = 0; i < marks.length; i++) {
+			if (marks[i] < 35) {
+				return "F";
+			} else {
+				marksSum += marks[i];
+			}
 		}
-		else {
-			int sum = marks[0]+marks[1]+marks[2];
-			if(sum<=150) {
-				return "D";
-			}
-			else if(sum>150 && sum<=200) {
-				return "B";
-			}
-			else if(sum>200 && sum<=250) {
-				return "A";
-			}
-			else {
-				return "A+";
-			}
-		}	
+		
+		if (marksSum <= 150) return "D";
+		else if (marksSum > 150 && marksSum <= 200) return "C";
+		else if (marksSum > 200 && marksSum <= 250) return "B";
+		else if (marksSum > 250 && marksSum <= 300) return "A";
+		
+		return "D";
 	}
 	
-
-public String validate(Student studentobject) throws NullNameException, NullMarksArrayException, NullStudentObjectException{
-	if(studentobject == null) {
-		throw new NullStudentObjectException();
+	public String validate(Student i) throws NullNameException,NullMarksArrayException,NullStudentObjectException
+	{
+		
+			if(i==null)
+				throw new NullStudentObjectException();
+			else if(i.getMarks()==null)
+				throw new NullMarksArrayException();
+			else if (i.getName()==null)
+				throw new NullNameException();
+			else 
+				return findGrades(i);
+			
 	}
-	else {
-		if(studentobject.getName() == null || studentobject.getName().isEmpty()) {
-			throw new NullNameException();
-		}
-		else if(studentobject.getMarks() == null) {
-			throw new NullMarksArrayException();
-		}
-		else {
-			return findGrades(studentobject);
-			//return findGrade(studentobject);
-		}
-	}
+	
+	
 }
-}
-
-
