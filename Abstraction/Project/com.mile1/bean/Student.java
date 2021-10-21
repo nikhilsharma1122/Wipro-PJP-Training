@@ -1,17 +1,23 @@
 package com.mile1.bean;
 
 public class Student {
+	
+	
 	String name;
 	int marks[];
-	
-	
-	public Student() {
+	String grade;
+	public Student()
+	{
+		name="";
+		grade="";
+	}
+	public Student(String name,int[] marks) {
 		super();
-	}
-	public Student(String name, int[] marks) {
-		this.marks = marks;
 		this.name = name;
+		this.marks = marks;
+		grade="";
 	}
+	
 	public String getName() {
 		return name;
 	}
@@ -22,8 +28,15 @@ public class Student {
 		return marks;
 	}
 	public void setMarks(int[] marks) {
-		this.marks = marks;
+		this.marks = marks; 
+	}
+	public String getGrade() {
+		return grade;
+	}
+	public void setGrade(String grade) {
+		this.grade = grade;
 	}
 	
-}
+	
 
+}
