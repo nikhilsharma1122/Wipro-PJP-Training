@@ -3,36 +3,60 @@ package com.mile1.service;
 import com.mile1.bean.Student;
 
 public class StudentService {
-	public int findNumberOfNullMarksArray(Student s[]) {
-			int count = 0;
-			for(Student student:s) {
-				if(student!=null) {
-					if(student.getMarks()==null) {
-						count++;
-					}
-				}
+
+	
+	
+	public int findNumberOfNullMarks(Student s[])
+	{
+		int c=0;
+		if (s!=null)
+		for (Student i:s)
+		{
+			try {
+			i.getMarks();
 			}
-			return count;
-	}
-	public int findNumberOfNullName(Student s[]) {
-		 int count=0;
-	        for(Student student:s){
-	            if(student!=null) {
-	                if (student.getName() == null) {
-	                    count++;
-	                }
-	            }
-	        }
-	        return count;
-	}
-	public int findNumberOfNullObjects(Student s[]) {
-		int count = 0;
-		for(Student student:s) {
-			if(student == null) {
-				count++;
+			catch(Exception e)
+			{
+				c++;
 			}
 		}
-		return count;
+		
+		return c;
 	}
+	
+	public int findNumberOfNullNames(Student s[])
+	{
+		int c=0;
+		if (s!=null)
+		for (Student i:s)
+		{
+			try
+			{
+				i.getName();
+			}
+			catch(Exception e)
+			{
+				c++;
+			}
+		}
+		
+		return c;
+	}
+	
+	public int findNumberOfNullObjects(Student s[])
+	{
+		int c=0;
+		if (s!=null)
+		for (Student i:s)
+		{
+		
+			if(i==null)
+			c++;
+		}
+		
+		return c;
+	}
+	
+	
 	
 }
