@@ -19,4 +19,13 @@ public class contactList {
 		}
 		
 	}
+	public void getDetails() {
+		Set<Entry<String, Integer>> set = contact.entrySet();
+		Iterator<Entry<String, Integer>> it = set.iterator();
+		while(it.hasNext()) {
+			Map.Entry<String, Integer>me = it.next();
+			System.out.println("Details of the Contact : "+me);
+		}
+		
+	}
 }
