@@ -1,6 +1,6 @@
 package map;
 import java.util.*;
-public class phoneMain {
+public class contactMain {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -10,6 +10,7 @@ public class phoneMain {
 		 list.addContact("C", 789);
 		 list.getName("B");
 		 list.getNumber(456);
+		 list.getDetails();
 	}
 
 }
