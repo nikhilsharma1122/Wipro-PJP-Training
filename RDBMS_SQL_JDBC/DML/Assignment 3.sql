@@ -1,2 +1,2 @@
-insert into my_employee values(1,'First name 1','Last name 1',100,30000);
+insert into my_employee values(201,'Michael','Hartstein',20,130000);
 Select * from my_employee;
