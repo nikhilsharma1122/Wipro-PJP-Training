@@ -1,1 +1,1 @@
-update employees set salary = salary +(salary*10) where department_id = 90;
+update employees set last_name = 'Higgins' where employee_id = 202;
