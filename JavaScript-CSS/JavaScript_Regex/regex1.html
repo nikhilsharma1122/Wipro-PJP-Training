@@ -4,7 +4,7 @@
 <meta charset="ISO-8859-1">
 <title>JavaScript</title>
 <script>
-function onlyNumber(e){
+function validate(){
 	  var passwd = document.getElementById("passwd");
 	    var passwdRegEx = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
 	    if (!passwd.value.match(passwdRegEx)) {
