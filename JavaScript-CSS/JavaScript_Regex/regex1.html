@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>JavaScript</title>
+<script>
+function onlyNumber(e){
+	  var passwd = document.getElementById("passwd");
+	    var passwdRegEx = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+	    if (!passwd.value.match(passwdRegEx)) {
+	        alert(
+	            "Please enter a password between 6 to 20 chars, with atleast one lowercase letter, one uppercase letter and one number!"
+	        );
+	        passwd.focus();
+	        return false;
+	    }
+}
+</script>
+</head>
+<body>	
+<form onsubmit="return validate()">
+            <label for="passwd">Password :</label><input type="password" id="passwd" /><br />
+            <input type="submit" value="Submit" />
+        </form>
+ </body>
+</html>	
