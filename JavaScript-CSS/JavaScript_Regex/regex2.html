@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>JavaScript</title>
+</head>
+<body>	
+ <label for="mem_num">Member Number :</label><input type="text" id="mem_num" /><br />
+            <label for="passwd">Password :</label><input type="password" id="passwd" /><br />
+            <input type="submit" value="Submit" />
+        </form>
+ </body>
+ <script>
+function onlyNumber(e){
+	   var memNum = document.getElementById("mem_num");
+	    var passwd = document.getElementById("passwd");
+	    var memNumRegEx = /^\d+$/;
+	    var passwdRegEx = /.....+/;
+	    if (!memNum.value.match(memNumRegEx)) {
+	        alert("Please enter a number only!");
+	        memNum.focus();
+	        return false;
+	    }
+	    if (!passwd.value.match(passwdRegEx)) {
+	        alert("Please enter a password longer than 4 chars!");
+	        passwd.focus();
+	        return false;
+	    } 
+}
+</script>
+</html>	
