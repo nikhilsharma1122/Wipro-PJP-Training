@@ -4,14 +4,15 @@
 <meta charset="ISO-8859-1">
 <title>JavaScript</title>
 </head>
-<body>	
+<body>
+	<form onsubmit="return validate();">
  <label for="mem_num">Member Number :</label><input type="text" id="mem_num" /><br />
             <label for="passwd">Password :</label><input type="password" id="passwd" /><br />
             <input type="submit" value="Submit" />
         </form>
  </body>
  <script>
-function onlyNumber(e){
+function validate(){
 	   var memNum = document.getElementById("mem_num");
 	    var passwd = document.getElementById("passwd");
 	    var memNumRegEx = /^\d+$/;
