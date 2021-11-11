@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>JavaScript</title>
+<script>
+function validate(){
+	var memNum = document.getElementById("mem_num");
+	var pass = document.getElementById("passwd");
+	if(memNum.value == null || memNum.value == "" || isNaN(memNum.value)){
+		alert("Please enter a number only !");
+		memNum.focus();
+		return false;
+	}
+	 if (passwd.value == "" || passwd.value.length < 4) {
+	        alert("Please enter a password longer than 4 chars!");
+	        passwd.focus();
+	        return false;
+	    }
+}
+</script>
+</head>
+<body>
+<form onsubmit="return validate()">
+            <label for="mem_num">Member Number :</label><input type="text" id="mem_num" /><br />
+            <label for="passwd">Password :</label><input type="password" id="passwd" /><br />
+            <input type="submit" value="Submit" />
+        </form></form>
+ </body>
+</html>	
