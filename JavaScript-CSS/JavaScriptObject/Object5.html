@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>JavaScript</title>
+</head>
+<body>
+<form name="form1">
+ <label for="text">Text : </label><input type="text" name="text" id="text" onblur="uppercase();" />
+</form>
+</body>
+<script>
+function uppercase(){
+	var text = document.getElementById("text");
+	text.value = text.value.toUpperCase();
+}
+</script>
+
+</html>	
