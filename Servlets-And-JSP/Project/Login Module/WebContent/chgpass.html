@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script>
+var check = function() {
+	  if (document.getElementById('password').value ==
+	    document.getElementById('newpass').value) {
+	    document.getElementById('message').style.color = 'green';
+	    document.getElementById('message').innerHTML = 'matching';
+	  } else {
+	    document.getElementById('message').style.color = 'red';
+	    document.getElementById('message').innerHTML = 'not matching';
+	  }
+	}
+</script>
+</head>
+<body>
+	<h2>Change Password!!</h2>
+	<form method="post" action = "ChangePasswordServlet">
+	Username: <input type="text" name="username" /><br>
+	Old Password: <input type="text" name="password" /><br>
+	New Password:<input type="password" name="newpass" onkeyup="check();"/><br>
+	Retype New Password: <input type="text" name = "repass" onkeyup="check();"/><span id='message'><br>
+	<input type="Submit" value="Change Password">
+	</form>
+</body>
+</html>
