@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>CRUD</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>NewUserServlets</display-name>
+    <servlet-name>NewUserServlets</servlet-name>
+    <servlet-class>NewUserServlets</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NewUserServlet</servlet-name>
+    <url-pattern>/NewUserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LoginServlets</display-name>
+    <servlet-name>LoginServlets</servlet-name>
+    <servlet-class>LoginServlets</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlets</servlet-name>
+    <url-pattern>/LoginServlets</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ChangePasswordServlets</display-name>
+    <servlet-name>ChangePasswordServlets</servlet-name>
+    <servlet-class>ChangePasswordServlets</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ChangePasswordServlets</servlet-name>
+    <url-pattern>/ChangePasswordServlets</url-pattern>
+  </servlet-mapping>
+</web-app>
